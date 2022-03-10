@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import Heading from "components/Heading";
@@ -22,9 +22,8 @@ const CircuitDetails = () => {
 
 	const openItinerary = () => setItineraryOpened(true);
 	const closeItinerary = () => setItineraryOpened(false);
-	console.log("Query details for ", id);
 
-	return (
+	return !id ? <Fragment></Fragment> : (
 		<PageProvider defaultLoading={ false } defaultTab={ 1 }>
 			<Heading
 				title="Baobabs Alley"

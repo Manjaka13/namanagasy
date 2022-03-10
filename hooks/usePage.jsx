@@ -17,8 +17,6 @@ const PageProvider = ({ children, defaultLoading, defaultTab }) => {
 	const [loading, setLoading] = useState(defaultLoading ? true : false);
 	const [tab, setTab] = useState(typeof defaultTab ===  "number" ? defaultTab : -1);
 
-	console.log(tab)
-
 	// Switch loading
 	const load = (tab) => {
 		if(tab)
