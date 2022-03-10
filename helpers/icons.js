@@ -18,7 +18,8 @@ import {
 	faCar,
 	faCalendarAlt,
 	faMapMarkerAlt,
-	faTimesCircle
+	faTimesCircle,
+	faExclamationCircle
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -45,5 +46,6 @@ library.add(
 	faCar,
 	faCalendarAlt,
 	faMapMarkerAlt,
-	faTimesCircle
+	faTimesCircle,
+	faExclamationCircle
 );
