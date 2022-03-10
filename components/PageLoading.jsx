@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "components/Navbar";
+import Navigation from "components/Navigation";
 import Spinner from "components/Spinner";
 
 /*
@@ -8,7 +8,7 @@ import Spinner from "components/Spinner";
 
 const PageLoading = () => (
 	<main>
-		<Navbar />
+		<Navigation />
 		<div className="page-loading w-100 f-c-ce-ce">
 			<Spinner />
 			<p className="tx-c pd-20 b">Loading . . .</p>
