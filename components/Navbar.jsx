@@ -6,7 +6,7 @@ import AppLinks from "components/AppLinks";
 	Navigation bar
 */
 
-const Navbar = ({ active }) => (
+const Navbar = () => (
 	<nav className="navbar w-100">
 		<div className="container f-r-be-ce h-100">
 			<div className="f-r-st-ce">
@@ -17,7 +17,7 @@ const Navbar = ({ active }) => (
 				/>
 				<h1 className="navbar__title fs-220 t">Namana Gasy</h1>
 			</div>
-			<AppLinks active={ active }/>
+			<AppLinks />
 			<div className="navbar__trigger o-h tr-200 br-r t fs-170 p" title="Menu">
 				<Icon icon={ ["fas", "bars"] } />
 			</div>

@@ -8,3 +8,4 @@
 [ ] Add menu
 [ ] Dynamic details page
 [ ] Check all pages image representation
+[ ] Dynamic import only the map

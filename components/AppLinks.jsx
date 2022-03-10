@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { v4 as uuidv4 } from "uuid";
@@ -35,15 +35,23 @@ const linkList = [
 	}
 ];
 
-const AppLinks = ({ active }) => {
+const AppLinks = () => {
+	const { tab } = usePage();
 	const { load } = usePage();
+
 	const mappedLinks = linkList.map((link, key) => (
 		<li
-			className={ `app-links__item ${key === active && "app-links__item--active"}` }
+			className={ `app-links__item ${key === tab && "app-links__item--active"}` }
 			key={ uuidv4() }
 		>
 			<Link href={ link.link } passHref>
-				<a className="app-links__link" title={ link.title } onClick={ () => load() }>
+				<a
+					className="app-links__link"
+					title={ link.title }
+					onClick={() => {
+						load(key);
+					}}
+				>
 					<Icon className="app-links__icon mg-r-5" icon={ link.icon } />
 					{ link.content }
 				</a>

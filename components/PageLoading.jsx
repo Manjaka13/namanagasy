@@ -6,9 +6,9 @@ import Spinner from "components/Spinner";
 	Shown when page still loads
 */
 
-const PageLoading = ({ active = 0 }) => (
+const PageLoading = () => (
 	<main>
-		<Navbar active={ active }/>
+		<Navbar />
 		<div className="page-loading w-100 f-c-ce-ce">
 			<Spinner />
 			<p className="tx-c pd-20 b">Loading . . .</p>

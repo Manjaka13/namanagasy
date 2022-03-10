@@ -8,13 +8,13 @@ import { usePage } from "hooks/usePage";
 	Pages template
 */
 
-const Page = ({ active, children }) => {
+const Page = ({ children }) => {
 	const { loading } = usePage();
 
-	return loading ? <PageLoading active={ active } /> : (
+	return loading ? <PageLoading /> : (
 		<Fragment>
 			<main>
-				<Navbar active={ active }/>
+				<Navbar />
 				{ children }
 			</main>
 			<footer>

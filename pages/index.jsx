@@ -9,14 +9,14 @@ import { PageProvider } from "hooks/usePage";
 */
 
 const Homepage = () => (
-	<PageProvider>
+	<PageProvider defaultTab={ 0 }>
 		<Heading
 			title="Travel to Madagascar with an experienced tourism agency"
 			image="/images/covers/baobabs-morondava.jpg"
 		>
 			Hire a touristic driver guide to visit Madagascar.
 		</Heading>
-		<Page active={ 0 }>
+		<Page>
 			<CoverHome />
 		</Page>
 	</PageProvider>

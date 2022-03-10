@@ -7,7 +7,7 @@ import { PageProvider } from "hooks/usePage";
 */
 
 const CircuitsPage = () => (
-	<PageProvider defaultLoading={ true }>
+	<PageProvider defaultLoading={ true } defaultTab={ 1 }>
 		<CircuitsPageWrapper />
 	</PageProvider>
 );

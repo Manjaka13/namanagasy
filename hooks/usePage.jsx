@@ -13,17 +13,24 @@ import React, {
 const PageContext = createContext({});
 
 // Setup provider wrapper
-const PageProvider = ({ children, defaultLoading }) => {
+const PageProvider = ({ children, defaultLoading, defaultTab }) => {
 	const [loading, setLoading] = useState(defaultLoading ? true : false);
+	const [tab, setTab] = useState(typeof defaultTab ===  "number" ? defaultTab : -1);
+
+	console.log(tab)
 
 	// Switch loading
-	const load = () => setLoading(true);
+	const load = (tab) => {
+		if(tab)
+			setTab(tab);
+		setLoading(true);
+	};
 	const unload = () => setLoading(false);
 
 	// Memoize values to prevent futile re-renders
 	const memoizedValues = useMemo(() => ({
-		loading, load, unload
-	}), [loading]);
+		loading, load, unload, tab
+	}), [loading, tab]);
 
 	return (
 		<PageContext.Provider value={ memoizedValues }>

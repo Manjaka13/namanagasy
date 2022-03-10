@@ -19,7 +19,7 @@ const CircuitsPageWrapper = () => {
 			>
 				Affordable touristic circuits to Madagascar with experienced driver and guide.
 			</Heading>
-			<Page active={ 1 }>
+			<Page>
 				<CircuitList circuitList={ circuitList } />
 			</Page>
 		</Fragment>

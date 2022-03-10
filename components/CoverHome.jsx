@@ -56,7 +56,7 @@ const CoverHome = () => {
 									title="Check list of available circuits for this season."
 									onClick={() => {
 										if(typeof load === "function")
-											load();
+											load(1);
 									}}
 								>
 									<Icon icon={ ["fas", "pencil-alt"] } /> Available circuits
