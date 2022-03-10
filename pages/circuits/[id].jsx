@@ -1,27 +1,22 @@
 import React, { Fragment, useState } from "react";
-import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import Heading from "components/Heading";
 import Page from "components/Page";
 import { PageProvider } from "hooks/usePage";
 import Planning from "components/Planning";
-// import Itinerary from "components/Itinerary";
-// Dynamic load itinerary
-const Itinerary = dynamic(() => import("components/Itinerary"), {
-	ssr: false
-});
+import PlaceDetails from "components/PlaceDetails";
 
 /*
 	Circuit details
 */
 
 const CircuitDetails = () => {
-	const [itineraryOpened, setItineraryOpened] = useState(false);
+	const [placeDetailsOpened, setPlaceDetailsOpened] = useState(false);
 	const router = useRouter();
 	const { id } = router.query;
 
-	const openItinerary = () => setItineraryOpened(true);
-	const closeItinerary = () => setItineraryOpened(false);
+	const openPlace = () => setPlaceDetailsOpened(true);
+	const closePlace = () => setPlaceDetailsOpened(false);
 
 	return !id ? <Fragment></Fragment> : (
 		<PageProvider defaultLoading={ false } defaultTab={ 1 }>
@@ -34,8 +29,8 @@ const CircuitDetails = () => {
 			<Page>
 				<div className="circuit-details n-s">
 					<div className="circuit-details__main container w-100">
-						<Planning open={ openItinerary }/>
-						<Itinerary opened={ itineraryOpened } close={ closeItinerary } />
+						<Planning open={ openPlace }/>
+						<PlaceDetails opened={ placeDetailsOpened } close={ closePlace } />
 					</div>
 				</div>
 			</Page>
