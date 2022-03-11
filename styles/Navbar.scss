@@ -41,7 +41,13 @@
 			}
 		}
 		&__item {
-			margin-left: 10px;
+			margin-left: 50px;
+			@include screen-x(1600px) {
+				margin-left: 10px;
+			}
+			@include screen-x(1400px) {
+				margin-left: 30px;
+			}
 			@include screen-x(1000px) {
 				margin-left: 5px;
 			}

@@ -47,6 +47,7 @@
 	}
 
 	.app-links {
+		padding-top: 20px;
 		&__link {
 			@include transition;
 			color: $color-theme;

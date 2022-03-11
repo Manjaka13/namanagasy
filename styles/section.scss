@@ -24,6 +24,12 @@
 	&__title2 {
 		font-size: 3em;
 		padding-bottom: 20px;
+		@include screen-x(900px) {
+			font-size: 2.5em;
+		}
+		@include screen-x(700px) {
+			font-size: 2.3em;
+		}
 	}
 
 	&__separator {
@@ -31,5 +37,8 @@
 		width: 30%;
 		height: 5px;
 		border-radius: 3px;
+		@include screen-x(700px) {
+			width: 50%;
+		}
 	}
 }
