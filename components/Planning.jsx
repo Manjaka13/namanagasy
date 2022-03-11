@@ -31,8 +31,8 @@ const Planning = ({ open }) => {
 			}}
 		>
 			<div className="f-r-be-ce">
-				<p className="title b u p-n">
-					<Icon icon={ ["fas", "calendar-alt"] } /> Day { key + 1 } :
+				<p className="title b p-n">
+					<Icon icon={ ["fas", "calendar-alt"] } /> <span className="u">Day { key + 1 }</span> :
 				</p>
 				<div className="marker w-25px h-25px o-h br-r bg-white b-b f-r-ce-ce tr-200">
 					<Icon icon={ ["fas", "map-marker-alt"] } />

@@ -42,6 +42,13 @@
 			width: calc(100% - 40px);
 			background: rgba(225, 225, 225);
 			resize: none;
+			color: black;
+			&:hover {
+				background: rgba(210, 210, 210);
+			}
+			&:focus {
+				background: rgba(200, 200, 200);
+			}
 		}
 		.textarea {
 			height: 100px;

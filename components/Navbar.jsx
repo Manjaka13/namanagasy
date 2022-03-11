@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import AppLinks from "components/AppLinks";
+import { WEBSITE_NAME } from "helpers/const";
 
 /*
 	Navigation bar
@@ -15,7 +16,7 @@ const Navbar = ({ toggle }) => (
 					src="/images/namanagasy-logo.png"
 					alt="Namanagasy logo"
 				/>
-				<h1 className="navbar__title fs-220 t">Namana Gasy</h1>
+				<h1 className="navbar__title fs-220 t">{ WEBSITE_NAME }</h1>
 			</div>
 			<AppLinks />
 			<div

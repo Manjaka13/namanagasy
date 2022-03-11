@@ -1,5 +1,6 @@
 .place-details {
 	@include screen-x(900px) {
+		display: block;
 		position: fixed;
 		top: 76px;
 		left: 0;
@@ -19,6 +20,10 @@
 		border: 3px rgb(100, 100, 100) solid;
 		background: rgba(235, 235, 235);
 		flex-grow: 1;
+		@include screen-x(900px) {
+			height: 280px;
+			flex-grow: 0;
+		}
 	}
 
 	.slide {

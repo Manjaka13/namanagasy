@@ -76,13 +76,16 @@
 				pointer-events: auto;
 				font-size: 1.5em;
 				font-weight: bold;
-				background: $color-theme;
-				color: rgb(40, 40, 40);
+				border: 3px $color-theme solid;
+				background: rgba(0, 0, 0, 0.3);
+				text-shadow: 1px 1px 3px black;
 				&:hover {
-					background: darken($color-theme, 10%);
+					background: rgba(0, 0, 0, 0.6);
+					color: white;
+					border: 3px white solid;
 				}
 				&:active {
-					background: lighten($color-theme, 10%);
+					background: rgba(0, 0, 0, 0.9);
 				}
 			}
 		}

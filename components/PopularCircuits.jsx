@@ -41,7 +41,7 @@ const PopularCircuits = () => {
 						{circuit && (
 							<Link href={ `/circuits/${circuit.id}` } passHref>
 								<a
-									className="details pd-10 pd-l-20 pd-r-20 br-5 bg-green white tr-200 p"
+									className="details pd-10 pd-l-20 pd-r-20 br-5 bg-green white tr-200"
 									title="View details"
 									onClick={() => {
 										if(typeof load === "function")
@@ -55,7 +55,7 @@ const PopularCircuits = () => {
 						{!circuit && (
 							<Link href="/circuits" passHref>
 								<a
-									className="details pd-10 pd-l-20 pd-r-20 br-5 bg-green white tr-200"
+									className="details pd-10 pd-l-20 pd-r-20 br-5 t tr-200"
 									title="View all available circuits"
 									onClick={() => {
 										if(typeof load === "function")

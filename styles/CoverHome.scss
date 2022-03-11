@@ -52,10 +52,10 @@
 		background: rgba(0, 0, 0, 0.4);
 		&:hover {
 			color: white;
+			border: 3px white solid;
 			background: rgba(0, 0, 0, 0.8);
 		}
 		&:active {
-			border: 3px white solid;
 			background: black;
 		}
 		@include screen-x(1400px) {

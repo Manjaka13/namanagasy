@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 
@@ -27,11 +26,9 @@ const socialList = [
 
 const mappedSocial = socialList.map(social => (
 	<li className="social__item" key={ uuidv4() }>
-		<Link href={ social.link } passHref>
-			<a className="social__link tr-200" title={ social.title }>
-				<Icon icon={ social.icon } />
-			</a>
-		</Link>
+		<a className="social__link tr-200" href={ social.link } title={ social.title }>
+			<Icon icon={ social.icon } />
+		</a>
 	</li>
 ));
 

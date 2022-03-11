@@ -27,7 +27,7 @@ const CoverHome = () => {
 				idDelay = setTimeout(() => {
 					setCurrentChar(0);
 					setCurrentText(prevState => prevState + 1 >= textList.length ? 0 : ++prevState);
-				}, 1000);
+				}, 1500);
 			}
 			else
 				setCurrentChar(prevState => ++prevState);
@@ -64,7 +64,7 @@ const CoverHome = () => {
 							</Link>
 						</div>
 						<div className="cover-home__bottom w-100 o-h f-c-ce-en">
-							<div className="cover-home__separator w-60 bg-t"></div>
+							<div className="cover-home__separator w-60 bg-white"></div>
 							<Social />
 						</div>
 					</div>

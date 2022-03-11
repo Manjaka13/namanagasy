@@ -37,7 +37,7 @@ const CircuitCard = ({
 						<Icon icon={ ["fas", "share"] } />
 					</div>
 					<p className="price-text pd-10 pd-b-20 fs-90 white">
-						Starting from <span className="price pd-5 pd-l-10 pd-r-10 mg-l-5 lime br-5">{ price } $ / pers</span>
+						Starting at <span className="price b lime pd-10 pd-t-5 pd-b-5 br-5 mg-l-5 fs-130">{ price } $ / pers</span>
 					</p>
 				</div>
 			</div>
