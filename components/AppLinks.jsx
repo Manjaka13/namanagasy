@@ -31,7 +31,7 @@ const linkList = [
 		content: "Contacts",
 		icon: ["fas", "envelope"],
 		title: "Contact us !",
-		link: "#0"
+		link: "#contacts"
 	}
 ];
 

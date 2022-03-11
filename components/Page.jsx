@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Navigation from "components/Navigation";
 import Copyright from "components/Copyright";
+import Contacts from "components/Contacts";
 import PageLoading from "components/PageLoading";
 import { usePage } from "hooks/usePage";
 
@@ -18,6 +19,7 @@ const Page = ({ children }) => {
 				{ children }
 			</main>
 			<footer>
+				<Contacts />
 				<Copyright />
 			</footer>
 		</Fragment>
