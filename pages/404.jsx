@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import Heading from "components/Heading";
 import Page from "components/Page";
-import CoverHome from "components/CoverHome";
 import { PageProvider } from "hooks/usePage";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { usePage } from "hooks/usePage";

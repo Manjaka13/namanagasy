@@ -13,8 +13,8 @@ const Itinerary = dynamic(() => import("components/Itinerary"), {
 	Place map and details
 */
 
-const zoom = 15;
-const position = [33.5024, 36.2988];
+// const zoom = 15;
+// const position = [33.5024, 36.2988];
 
 const PlaceDetails = () => {
 	const slideList = [

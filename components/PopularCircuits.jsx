@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import Link from "next/link";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import Spinner from "components/Spinner";
@@ -26,10 +26,10 @@ const PopularCircuits = () => {
 			return (
 				<div
 					className="popular-circuits__card w-100 h-100 tr-500"
-				 	style={{
-				 		background: `url(${circuit ? circuit.image : "/images/circuits/tuléar-madagascar.jpg"}) center center no-repeat`,
-				 		backgroundSize: "cover"
-				 	}}
+					style={{
+						background: `url(${circuit ? circuit.image : "/images/circuits/tuléar-madagascar.jpg"}) center center no-repeat`,
+						backgroundSize: "cover"
+					}}
 				>
 					<div className="popular-circuits__overlay w-100 h-100 tr-200 f-c-ce-ce">
 						{circuit && (<h3 className="title white fs-180 pd-b-20">{ circuit.title }</h3>)}
