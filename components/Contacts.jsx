@@ -30,7 +30,7 @@ const contactsList = [
 ];
 
 const mappedContacts = contactsList.map(contact => (
-	<li className="contacts__item pd-t-20">
+	<li className="contacts__item pd-t-20" key={ uuidv4() }>
 		<Icon icon={ contact.icon } /> { contact.content }
 	</li>
 ));

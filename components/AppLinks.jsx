@@ -39,25 +39,40 @@ const AppLinks = () => {
 	const { tab } = usePage();
 	const { load } = usePage();
 
-	const mappedLinks = linkList.map((link, key) => (
-		<li
-			className={ `app-links__item ${key === tab && "app-links__item--active"}` }
-			key={ uuidv4() }
-		>
-			<Link href={ link.link } passHref>
-				<a
-					className="app-links__link"
-					title={ link.title }
-					onClick={() => {
-						load(key);
-					}}
-				>
-					<Icon className="app-links__icon mg-r-5" icon={ link.icon } />
-					{ link.content }
-				</a>
-			</Link>
-		</li>
-	));
+	const mappedLinks = linkList.map((link, key) => {
+		const isAnchor = link.link.substr(0, 1) === "#";
+		return (
+			<li
+				className={ `app-links__item ${key === tab && "app-links__item--active"}` }
+				key={ uuidv4() }
+			>
+				{isAnchor && (
+					<a
+						className="app-links__link"
+						title={ link.title }
+						href={ link.link }
+					>
+						<Icon className="app-links__icon mg-r-5" icon={ link.icon } />
+						{ link.content }
+					</a>
+				)}
+				{!isAnchor && (
+					<Link href={ link.link } passHref>
+						<a
+							className="app-links__link"
+							title={ link.title }
+							onClick={() => {
+								load(key);
+							}}
+						>
+							<Icon className="app-links__icon mg-r-5" icon={ link.icon } />
+							{ link.content }
+						</a>
+					</Link>
+				)}
+			</li>
+		);
+	});
 
 	return (
 		<ul className="app-links">
