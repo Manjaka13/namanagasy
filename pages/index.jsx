@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Heading from "components/Heading";
 import Page from "components/Page";
 import CoverHome from "components/CoverHome";
+import PopularCircuits from "components/PopularCircuits";
 import { PageProvider } from "hooks/usePage";
 
 /*
@@ -17,7 +18,10 @@ const Homepage = () => (
 			Hire a touristic driver guide to visit Madagascar.
 		</Heading>
 		<Page>
-			<CoverHome />
+			<Fragment>
+				<CoverHome />
+				<PopularCircuits />
+			</Fragment>
 		</Page>
 	</PageProvider>
 );

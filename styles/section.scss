@@ -1,0 +1,35 @@
+.section {
+	padding-top: 40px;
+
+	&__title {
+		color: $color-theme;
+		padding-bottom: 20px;
+		.icon {
+			margin-right: 5px;
+			animation: rotate-icon 4s ease-in-out infinite;
+			@keyframes rotate-icon {
+				0% {
+					transform: rotate(0deg);
+				}
+				50% {
+					transform: rotate(360deg);
+				}
+				100% {
+					transform: rotate(0deg);
+				}
+			}
+		}
+	}
+
+	&__title2 {
+		font-size: 3em;
+		padding-bottom: 20px;
+	}
+
+	&__separator {
+		background: $color-theme;
+		width: 30%;
+		height: 5px;
+		border-radius: 3px;
+	}
+}

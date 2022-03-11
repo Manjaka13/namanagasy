@@ -21,7 +21,9 @@ import {
 	faTimesCircle,
 	faExclamationCircle,
 	faPhone,
-	faHandshake
+	faHandshake,
+	faStar,
+	faPlusCircle
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -51,5 +53,7 @@ library.add(
 	faTimesCircle,
 	faExclamationCircle,
 	faPhone,
-	faHandshake
+	faHandshake,
+	faStar,
+	faPlusCircle
 );
