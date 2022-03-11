@@ -16,7 +16,7 @@ const Itinerary = dynamic(() => import("components/Itinerary"), {
 const zoom = 15;
 const position = [33.5024, 36.2988];
 
-const PlaceDetails = ({ opened, close }) => {
+const PlaceDetails = () => {
 	const slideList = [
 		"/images/circuits/baobabs-alley-morondava.jpg",
 		"/images/circuits/sainte-marie-madagascar.jpg",
@@ -37,23 +37,11 @@ const PlaceDetails = ({ opened, close }) => {
 		</div>
 	));
 
-	if(window.innerWidth > 900)
-		opened = true;
-
 	return (
-		<div className={ `place-details ${!opened ? "place-details--closed" : ""} bg-white b-b o-a tr-400 f-c-st-st` }>
-			<div className="place-details__title f-r-be-ce">
-				<h2 className="title fs-180 pd-20"><Icon icon={ ["fas", "map-marker-alt"] } /> Antananarivo</h2>
-				<button
-					className="close white bg-red pd-10 pd-l-20 pd-r-20 mg-r-20 br-5 tr-200 p"
-					onClick={() => {
-						if(typeof(close) === "function")
-							close();
-					}}
-				>
-					<Icon icon={ ["fas", "times-circle"] } /> Close
-				</button>
-			</div>
+		<div className="place-details bg-white b-b o-a tr-400 f-c-st-st">
+			<h2 className="title fs-180 pd-20">
+				<Icon icon={ ["fas", "car"] } /> Baobabs Alley
+			</h2>
 			<div className="place-details__map mg-l-20 o-h br-5">
 				<Itinerary />
 			</div>

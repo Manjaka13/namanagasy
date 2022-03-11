@@ -1,20 +1,4 @@
 .place-details {
-	@include screen-x(900px) {
-		display: block;
-		position: fixed;
-		top: 76px;
-		left: 0;
-		z-index: 2;
-		width: 100%;
-		height: calc(100vh - 76px);
-		overflow: auto;
-	}
-
-	&--closed {
-		opacity: 0;
-		pointer-events: none;
-	}
-
 	&__map {
 		width: calc(100% - 46px);
 		border: 3px rgb(100, 100, 100) solid;
@@ -29,7 +13,7 @@
 	.slide {
 		width: calc(100% - 40px);
 		@include screen-x(900px) {
-			height: 400px;
+			height: 350px;
 		}
 		@include screen-x(700px) {
 			height: 300px;
@@ -56,32 +40,8 @@
 		@include screen-x(900px) {
 			font-size: 1.6em;
 		}
-	}
-
-	.close {
-		display: none;
-		border: none;
-		&:hover {
-			background: lighten(red, 10%);
-		}
-		&:active {
-			background: darken(red, 10%);
-		}
-		@include screen-x(900px) {
-			display: inline-block;
-		}
-		@include screen-x(500px) {
-			margin-right: 0;
-			margin-left: 20px;
-			margin-bottom: 20px;
-		}
-	}
-
-	&__title {
-		@include screen-x(500px) {
-			flex-direction: column;
-			align-items: flex-start;
-			justify-content: initial;
+		@include screen-x(400px) {
+			font-size: 1.3em;
 		}
 	}
 }

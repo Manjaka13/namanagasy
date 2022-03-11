@@ -3,6 +3,9 @@
 		width: 5px;
 		height: 40px;
 		border-radius: 3px;
+		@include screen-x(400px) {
+			height: 30px;
+		}
 	}
 
 	.marker {
@@ -29,6 +32,8 @@
 	}
 
 	&__title {
-		position: sticky;
+		@include screen-x(400px) {
+			font-size: 1.3em;
+		}
 	}
 }

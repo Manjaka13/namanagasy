@@ -17,7 +17,7 @@ const planningList = [
 	"Curabitur eget quam rhoncus, lacinia quam gravida, convallis nibh."
 ];
 
-const Planning = ({ open }) => {
+const Planning = () => {
 	const [selected, setSelected] = useState(-1);
 
 	const mappedPlanning = planningList.map((planning, key) => (
@@ -26,8 +26,9 @@ const Planning = ({ open }) => {
 			key={ uuidv4() }
 			onClick={ () => {
 				setSelected(key);
-				if(typeof(open) === "function")
-					open(key);
+				setTimeout(() => {
+					window.location.href = "#circuit";
+				}, 200);
 			}}
 		>
 			<div className="f-r-be-ce">
@@ -46,10 +47,10 @@ const Planning = ({ open }) => {
 
 	return (
 		<div className="planning bg-white b-b o-a">
-			<div className="planning__title pd-20 f-r-st-ce">
+			<div className="pd-20 f-r-st-ce">
 				<div className="planning__separator bg-t w-10 mg-r-20"></div>
-				<h2 className="fs-180">
-					<Icon icon={ ["fas", "car"] } /> Planing details
+				<h2 className="planning__title fs-180">
+					<Icon icon={ ["fas", "pencil-alt"] } /> Planing details
 				</h2>
 			</div>
 			<ul className="planning__list mg-10 mg-t-0">

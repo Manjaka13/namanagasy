@@ -1,5 +1,5 @@
 .circuit-details {
-	margin-top: 96px;
+	padding-top: 96px;
 	margin-bottom: 20px;
 
 	&__main {
@@ -8,7 +8,7 @@
 		grid-auto-rows: auto;
 		grid-gap: 20px;
 		@include screen-x(900px) {
-			display: block;
+			grid-template-columns: repeat(1, 1fr);
 		}
 	}
 }
