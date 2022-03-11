@@ -31,7 +31,7 @@ const CoverHome = () => {
 			}
 			else
 				setCurrentChar(prevState => ++prevState);
-		}, 50);
+		}, 30);
 		return () => {
 			clearTimeout(id);
 			clearTimeout(idDelay);
