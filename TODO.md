@@ -9,3 +9,4 @@
 [ ] Dynamic details page
 [ ] Check all pages image representation
 [ ] Dynamic import only the map
+[ ] BUG: place details is upper of menu
