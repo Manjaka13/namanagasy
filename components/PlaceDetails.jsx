@@ -41,7 +41,7 @@ const PlaceDetails = ({ opened, close }) => {
 		opened = true;
 
 	return (
-		<div className={ `place-details ${!opened ? "place-details--closed" : ""} bg-white b-b o-a tr-400` }>
+		<div className={ `place-details ${!opened ? "place-details--closed" : ""} bg-white b-b o-a tr-400 f-c-st-st` }>
 			<div className="place-details__title f-r-be-ce">
 				<h2 className="title fs-180 pd-20"><Icon icon={ ["fas", "map-marker-alt"] } /> Antananarivo</h2>
 				<button

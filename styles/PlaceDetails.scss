@@ -16,11 +16,9 @@
 
 	&__map {
 		width: calc(100% - 46px);
-		min-height: 300px;
-		max-height: 300px;
-		height: 300px;
 		border: 3px rgb(100, 100, 100) solid;
 		background: rgba(235, 235, 235);
+		flex-grow: 1;
 	}
 
 	.slide {
