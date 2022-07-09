@@ -1,36 +1,5 @@
-// FastUI and global styles
-@import "./mixins.scss";
-@import "./container.scss";
-@import "./fastui.css";
-@import "./vars.scss";
-@import "./section.scss";
+/*
+    Import all styles
+*/
 
-#__next {
-	overflow: visible;
-}
-
-main {
-	height: auto;
-	min-height: 0;
-}
-
-.leaflet-control-attribution {
-	font-size: 1.3em;
-    font-weight: bold;
-}
-
-// Component styles
-@import "./Navbar.scss";
-@import "./CoverHome.scss";
-@import "./CircuitCard.scss";
-@import "./CircuitList.scss";
-@import "./Copyright.scss";
-@import "./Spinner.scss";
-@import "./PageLoading.scss";
-@import "./Planning.scss";
-@import "./PlaceDetails.scss";
-@import "./CircuitDetails.scss";
-@import "./NotFound.scss";
-@import "./Menu.scss";
-@import "./Contacts.scss";
-@import "./PopularCircuits.scss";
+@import "base/scaffolding.scss";

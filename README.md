@@ -1,6 +1,6 @@
 # Namanagasy
 
-Jonathan's company website.
+Jonathan's website.
 
 ### Project setup
 
@@ -32,8 +32,8 @@ npm run build
 npm run format
 ```
 
-### Check errors in project
+### Check errors
 
 ```
-npm run check
+npm run lint
 ```
