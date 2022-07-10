@@ -8,6 +8,9 @@ import {
 	faGlobe,
 	faEnvelope,
 	faBars,
+	faHandshake,
+	faPhone,
+	faMapMarkerAlt
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -26,5 +29,8 @@ library.add(
 	faPlane,
 	faGlobe,
 	faEnvelope,
-	faBars
+	faBars,
+	faHandshake,
+	faPhone,
+	faMapMarkerAlt
 );

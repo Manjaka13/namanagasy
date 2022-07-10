@@ -46,3 +46,8 @@ export interface IPageProviderProps {
 	children?: JSX.Element;
 	defaultLoading?: boolean;
 }
+
+export interface IContact {
+	icon: IconProp;
+	content: string;
+}

@@ -5,6 +5,7 @@ import { IHeadingProps } from "helpers/interface";
 import Footer from "components/Page/Footer";
 import PageWaiting from "components/Page/PageWaiting";
 import { PageProvider } from "components/hooks/usePage";
+import Contacts from "components/Contacts";
 
 /*
 	Page layout
@@ -27,6 +28,7 @@ const Page: FC<IHeadingProps> = ({
 				<Navigation />
 				<PageWaiting />
 				{children}
+				<Contacts />
 			</main>
 
 			{/* Footer */}
