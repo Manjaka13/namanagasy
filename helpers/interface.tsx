@@ -8,6 +8,7 @@ export interface IHeadingProps {
 	title?: string;
 	image?: string;
 	description?: string;
+	children?: JSX.Element;
 }
 
 export interface INavlink {

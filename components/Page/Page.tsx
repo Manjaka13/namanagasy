@@ -1,35 +1,30 @@
-import { Fragment } from "react";
+import { FC, Fragment } from "react";
 import Heading from "components/Page/Heading";
-import Image from "next/image";
 import Navigation from "components/Navigation/Navigation";
+import { IHeadingProps } from "helpers/interface";
+import Footer from "components/Page/Footer";
 
-const Page = ({ title = "", description = "", image = "" }): JSX.Element => {
-	return (
-		<Fragment>
-			{/* Head */}
-			<Heading title={title} description={description} image={image} />
-			{/* Body */}
-			<main>
-				<Navigation />
-				<h1>
-					Welcome to <a href="https://nextjs.org">Next.js!</a>
-				</h1>
-			</main>
-			{/* Footer */}
-			<footer>
-				<a
-					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Powered by{" "}
-					<span>
-						<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-					</span>
-				</a>
-			</footer>
-		</Fragment>
-	);
-};
+/*
+	Page layout
+*/
+
+const Page: FC<IHeadingProps> = ({
+	title,
+	description,
+	image,
+	children,
+}): JSX.Element => (
+	<Fragment>
+		{/* Head */}
+		<Heading title={title} description={description} image={image} />
+		{/* Body */}
+		<main>
+			<Navigation />
+			{children}
+		</main>
+		{/* Footer */}
+		<Footer />
+	</Fragment>
+);
 
 export default Page;

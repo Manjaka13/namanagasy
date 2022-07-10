@@ -2,10 +2,14 @@ import { FC } from "react";
 import Head from "next/head";
 import { IHeadingProps } from "helpers/interface";
 
+/*
+	Page head tag
+*/
+
 const Heading: FC<IHeadingProps> = ({
-	title = "",
-	description = "",
-	image = "",
+	title,
+	description,
+	image,
 }): JSX.Element => {
 	return (
 		<Head>
