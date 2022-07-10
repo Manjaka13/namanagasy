@@ -9,6 +9,7 @@ export interface IHeadingProps {
 	image?: string;
 	description?: string;
 	children?: JSX.Element;
+	defaultLoading?: boolean;
 }
 
 export interface INavlink {
@@ -19,7 +20,7 @@ export interface INavlink {
 }
 
 export interface IMenuContext {
-	opened: Boolean;
+	opened: boolean;
 	navLinks: Array<INavlink>;
 	toggle: () => void;
 	close: () => void;
@@ -32,5 +33,16 @@ export interface ISocial {
 }
 
 export interface ISpinnerProps {
-	className: string;
+	className?: string;
+}
+
+export interface IPageContext {
+	loading: boolean;
+	load: () => void;
+	unload: () => void;
+}
+
+export interface IPageProviderProps {
+	children?: JSX.Element;
+	defaultLoading?: boolean;
 }

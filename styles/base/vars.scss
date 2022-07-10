@@ -1,12 +1,9 @@
 $ui-step: 5;
-$ui-sides: (
-	"top",
-	"bottom",
-	"left",
-	"right"
-);
+$ui-sides: ("top", "bottom", "left", "right");
 $font-size: 1rem;
-$font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+	Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+	"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-color-title: rgb(50, 50, 50);
 $font-color-hard: black;
 $font-color-normal: rgb(80, 80, 80);
@@ -22,14 +19,7 @@ $width-preprocessor: "w";
 $height-preprocessor: "h";
 $background-preprocessor: "bg";
 $text-preprocessor: "tx";
-$screen-sizes: (
-	"xlg",
-	"lg",
-	"slg",
-	"md",
-	"sm",
-	"xsm"
-);
+$screen-sizes: ("xlg", "lg", "slg", "md", "sm", "xsm");
 $screen-xlg: 1400px;
 $screen-lg: 1200px;
 $screen-slg: 1000px;
@@ -54,3 +44,4 @@ $colors: (
 	white,
 	whitesmoke
 );
+$navbar-height: 76px;

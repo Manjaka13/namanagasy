@@ -18,7 +18,7 @@ const MenuContext = createContext<IMenuContext>(defaultState);
 
 // Setup provider wrapper
 const MenuProvider: FC<ReactNode> = ({ children }) => {
-	const [opened, setOpened] = useState<Boolean>(defaultState.opened);
+	const [opened, setOpened] = useState<boolean>(defaultState.opened);
 
 	// Toggles filter on of off
 	const toggle = (): void => setOpened((prevState) => !prevState);

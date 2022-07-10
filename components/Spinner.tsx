@@ -6,7 +6,7 @@ import { ISpinnerProps } from "helpers/interface";
 */
 
 const Spinner: FC<ISpinnerProps> = ({ className }): JSX.Element => (
-	<div className={`spinner ${className}`}>Loading...</div>
+	<div className={`spinner ${className || ""}`}>Loading...</div>
 );
 
 export default Spinner;

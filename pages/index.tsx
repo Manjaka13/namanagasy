@@ -12,6 +12,7 @@ const Home: NextPage = (): JSX.Element => {
 			title="Travel to Madagascar with an experienced tourism agency"
 			image="/assets/covers/baobabs-morondava.jpg"
 			description="Hire a touristic driver guide to visit Madagascar."
+			defaultLoading={true}
 		>
 			<Fragment>
 				<h1>
