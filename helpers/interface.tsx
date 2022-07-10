@@ -30,3 +30,7 @@ export interface ISocial {
 	link: string;
 	title: string;
 }
+
+export interface ISpinnerProps {
+	className: string;
+}
