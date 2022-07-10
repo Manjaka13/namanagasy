@@ -1,0 +1,76 @@
+// Navlinks in navbar
+.navbar .navlinks {
+	@include flex-row(initial, center);
+
+	@include screen-x(900px) {
+		display: none;
+	}
+
+	&__link {
+		@include transition;
+		color: $color-theme;
+		text-shadow: 1px 1px 3px black;
+		font-size: 13pt;
+		padding: 10px;
+		border-radius: 5px;
+		&:hover {
+			color: white;
+		}
+	}
+
+	&__item {
+		margin-left: 50px;
+		@include screen-x(1600px) {
+			margin-left: 10px;
+		}
+		@include screen-x(1400px) {
+			margin-left: 30px;
+		}
+		@include screen-x(1000px) {
+			margin-left: 5px;
+		}
+		&--active {
+			.navlinks__link {
+				background: rgba(234, 172, 42, 0.2);
+				box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+// Navlinks in mobile menu
+.menu .navlinks {
+	padding-top: 20px;
+	padding-left: 20px;
+
+	&__item {
+		@include screen-x(600px) {
+			text-align: center;
+		}
+		&--active {
+			.navlinks__link {
+				background: rgba(234, 172, 42, 0.2);
+				box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+				font-weight: bold;
+			}
+		}
+	}
+
+	&__link {
+		display: block;
+		@include transition;
+		color: $color-theme;
+		text-shadow: 1px 1px 3px black;
+		font-size: 13pt;
+		border-radius: 5px;
+		padding: 20px;
+		&:hover {
+			color: white;
+			padding-left: 40px;
+			@include screen-x(600px) {
+				padding-left: 20px;
+			}
+		}
+	}
+}

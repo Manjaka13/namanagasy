@@ -1,0 +1,54 @@
+.navbar {
+	height: 76px;
+	background: rgba(40, 40, 40);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 13;
+
+	&__logo {
+		@include screen-x(500px) {
+			width: 40px;
+			height: 40px;
+			margin-right: 10px;
+		}
+	}
+
+	&__title {
+		text-shadow: 1px 1px 3px black;
+		@include screen-x(1000px) {
+			font-size: 1.8em;
+		}
+		@include screen-x(500px) {
+			font-size: 1.6em;
+		}
+	}
+
+	&__trigger {
+		display: none;
+		$trigger-border: 3px;
+		$trigger-size: calc(60px - $trigger-border);
+		width: $trigger-size;
+		height: $trigger-size;
+		border: $trigger-border $color-theme solid;
+		box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+		&:hover {
+			background: $color-theme;
+			color: rgba(40, 40, 40);
+		}
+		&:active {
+			font-size: 1em;
+		}
+		@include screen-x(900px) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		@include screen-x(500px) {
+			$trigger-size: calc(50px - $trigger-border);
+			width: $trigger-size;
+			height: $trigger-size;
+		}
+	}
+}

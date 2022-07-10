@@ -1,0 +1,21 @@
+// Social in mobile menu
+.menu .social {
+	@include flex-row(center, center);
+
+	@include screen-y(600px) {
+		padding-top: 20px;
+	}
+
+	@include screen-y(450px) {
+		display: none;
+	}
+
+	&__link {
+		margin-left: 15px;
+		margin-right: 15px;
+		font-size: 2.5em;
+		&:hover {
+			color: white;
+		}
+	}
+}

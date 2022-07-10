@@ -2,4 +2,13 @@
     Import all styles
 */
 
+@import "base/fastui.css";
+@import "base/vars.scss";
+@import "base/mixins.scss";
 @import "base/scaffolding.scss";
+@import "base/container.scss";
+
+@import "./Social.scss";
+@import "Navigation/Navlinks.scss";
+@import "Navigation/Navbar.scss";
+@import "Navigation/Menu.scss";

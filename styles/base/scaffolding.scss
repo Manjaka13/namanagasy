@@ -1,0 +1,12 @@
+figure {
+	position: relative;
+}
+
+html,
+body,
+body > #root,
+#__next,
+main {
+	height: auto;
+	min-height: auto;
+}
