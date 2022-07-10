@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import type { NextPage } from "next";
 import Page from "components/Page/Page";
+import CoverHome from "components/Home/CoverHome";
 
 /*
 	Home page
@@ -15,9 +16,7 @@ const Home: NextPage = (): JSX.Element => {
 			defaultLoading={false}
 		>
 			<Fragment>
-				<h1>
-					Welcome to <a href="https://nextjs.org">Next.js!</a>
-				</h1>
+				<CoverHome />
 				<div className="container">
 					<p className="pd-b-20 tx-j">
 						Quisque pellentesque in sem at commodo. Nulla ut quam maximus, rutrum

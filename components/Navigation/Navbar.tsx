@@ -2,7 +2,7 @@ import { FC } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import Navlinks from "components/Navigation/Navlinks";
-import { useMenu } from "components/hooks/useMenu";
+import { useMenu } from "hooks/useMenu";
 
 /*
 	Navigation bar

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Navbar from "components/Navigation/Navbar";
 import Menu from "components/Navigation/Menu";
-import { MenuProvider } from "components/hooks/useMenu";
+import { MenuProvider } from "hooks/useMenu";
 
 /*
 	Navbar and menu wrapper

@@ -10,3 +10,8 @@ main {
 	height: auto;
 	min-height: auto;
 }
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

@@ -4,7 +4,7 @@ import Navigation from "components/Navigation/Navigation";
 import { IHeadingProps } from "helpers/interface";
 import Footer from "components/Page/Footer";
 import PageWaiting from "components/Page/PageWaiting";
-import { PageProvider } from "components/hooks/usePage";
+import { PageProvider } from "hooks/usePage";
 import Contacts from "components/Contacts";
 
 /*

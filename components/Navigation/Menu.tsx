@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Navlinks from "components/Navigation/Navlinks";
 import Social from "components/Social";
-import { useMenu } from "components/hooks/useMenu";
+import { useMenu } from "hooks/useMenu";
 
 /*
 	Mobile navigation

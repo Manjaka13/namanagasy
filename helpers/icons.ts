@@ -10,7 +10,8 @@ import {
 	faBars,
 	faHandshake,
 	faPhone,
-	faMapMarkerAlt
+	faMapMarkerAlt,
+	faPencilAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -32,5 +33,6 @@ library.add(
 	faBars,
 	faHandshake,
 	faPhone,
-	faMapMarkerAlt
+	faMapMarkerAlt,
+	faPencilAlt
 );

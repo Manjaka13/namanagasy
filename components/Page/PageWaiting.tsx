@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Spinner from "components/Spinner";
-import { usePage } from "components/hooks/usePage";
+import { usePage } from "hooks/usePage";
 
 /*
 	Shown to wait when page loads

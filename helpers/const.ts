@@ -75,4 +75,11 @@ const contactList: Array<IContact> = [
 	},
 ];
 
-export { baseUrl, navLinks, socialLinks, contactList };
+const homeTextList: Array<string> = [
+	"Prepare your next vacation",
+	"Trip to Madagascar for all budgets",
+	"Visit Madagascar and popular spots",
+	"Famous travel agency to Madagascar",
+];
+
+export { baseUrl, navLinks, socialLinks, contactList, homeTextList };

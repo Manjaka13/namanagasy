@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useMenu } from "components/hooks/useMenu";
+import { useMenu } from "hooks/useMenu";
 import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { INavlink } from "helpers/interface";
