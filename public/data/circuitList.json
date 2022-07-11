@@ -3,7 +3,7 @@
 		{
 			"id": "dslkfjlsdkfjsdk",
 			"title": "Baobabs Alley",
-			"image": "/assets/circuits/baobabs-alley-morondava.jpg",
+			"image": "/assets/circuit/baobabs-alley-morondava.jpg",
 			"price": 280,
 			"duration": 7,
 			"description": "Ut vel lorem a velit venenatis convallis mollis eu nisi. Aliquam consectetur ex sit amet ullamcorper vehicula. Nam in pretium velit. Sed volutpat dignissim scelerisque. Aenean molestie odio libero, vel condimentum risus iaculis vitae."
@@ -11,7 +11,7 @@
 		{
 			"id": "sdfdslflmdsjkf",
 			"title": "Sainte-Marie",
-			"image": "/assets/circuits/sainte-marie-madagascar.jpg",
+			"image": "/assets/circuit/sainte-marie-madagascar.jpg",
 			"price": 335,
 			"duration": 5,
 			"description": "Ut vel lorem a velit venenatis convallis mollis eu nisi. Aliquam consectetur ex sit amet ullamcorper vehicula. Nam in pretium velit. Sed volutpat dignissim scelerisque. Aenean molestie odio libero, vel condimentum risus iaculis vitae."
@@ -19,7 +19,7 @@
 		{
 			"id": "dsfsdjlfsdjsdlf",
 			"title": "Côte Est",
-			"image": "/assets/circuits/côte-est.jpg",
+			"image": "/assets/circuit/côte-est.jpg",
 			"price": 250,
 			"duration": 4,
 			"description": "Ut vel lorem a velit venenatis convallis mollis eu nisi. Aliquam consectetur ex sit amet ullamcorper vehicula. Nam in pretium velit. Sed volutpat dignissim scelerisque. Aenean molestie odio libero, vel condimentum risus iaculis vitae."
@@ -27,7 +27,7 @@
 		{
 			"id": "lmdsfjazazeazd",
 			"title": "Tuléar et Grand Sud",
-			"image": "/assets/circuits/tuléar-madagascar.jpg",
+			"image": "/assets/circuit/tuléar-madagascar.jpg",
 			"price": 234,
 			"duration": 4,
 			"description": "Ut vel lorem a velit venenatis convallis mollis eu nisi. Aliquam consectetur ex sit amet ullamcorper vehicula. Nam in pretium velit. Sed volutpat dignissim scelerisque. Aenean molestie odio libero, vel condimentum risus iaculis vitae."
@@ -35,7 +35,7 @@
 		{
 			"id": "dslkfunazuf",
 			"title": "Traversée RN-7",
-			"image": "/assets/circuits/rn7-madagascar.jpg",
+			"image": "/assets/circuit/rn7-madagascar.jpg",
 			"price": 205,
 			"duration": 3,
 			"description": "Ut vel lorem a velit venenatis convallis mollis eu nisi. Aliquam consectetur ex sit amet ullamcorper vehicula. Nam in pretium velit. Sed volutpat dignissim scelerisque. Aenean molestie odio libero, vel condimentum risus iaculis vitae."

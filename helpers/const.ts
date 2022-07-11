@@ -21,7 +21,7 @@ const navLinks: Array<INavlink> = [
 		content: "Circuits",
 		icon: ["fas", "plane"],
 		title: "Available circuits for this season.",
-		link: "/circuits",
+		link: "/circuit",
 	},
 	{
 		content: "Madagascar",

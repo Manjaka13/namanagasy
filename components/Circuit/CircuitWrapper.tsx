@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import CircuitList from "components/Circuits/CircuitList";
+import CircuitList from "components/Circuit/CircuitList";
 import useCircuit from "hooks/useCircuit";
 
 /*

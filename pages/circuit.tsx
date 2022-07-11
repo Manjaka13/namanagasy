@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import type { NextPage } from "next";
 import Page from "components/Page/Page";
 import { PageProvider } from "hooks/usePage";
-import CircuitWrapper from "components/Circuits/CircuitWrapper";
+import CircuitWrapper from "components/Circuit/CircuitWrapper";
 
 /*
 	Circuits page

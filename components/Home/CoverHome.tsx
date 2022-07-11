@@ -48,7 +48,7 @@ const CoverHome: FC = (): JSX.Element => {
 							<h3 className="cover-home__title2 t tx-c h-50px f-r-ce-ce mg-t-40 mg-b-40">
 								{splittedText}
 							</h3>
-							<Link href="/circuits" passHref>
+							<Link href="/circuit" passHref>
 								<a
 									className="cover-home__check pd-10 pd-l-20 pd-r-20 br-5 p t tr-200"
 									title="Check list of available circuits for this season."
