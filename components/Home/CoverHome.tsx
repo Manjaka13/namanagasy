@@ -11,7 +11,7 @@ import { navLinks } from "helpers/const";
 */
 
 const CoverHome: FC = (): JSX.Element => {
-	const { load } = usePage();
+	const { switchPage } = usePage();
 	const [currentText, setCurrentText] = useState<number>(0);
 	const [currentChar, setCurrentChar] = useState<number>(0);
 
@@ -52,7 +52,7 @@ const CoverHome: FC = (): JSX.Element => {
 								<a
 									className="cover-home__check pd-10 pd-l-20 pd-r-20 br-5 p t tr-200"
 									title="Check list of available circuits for this season."
-									onClick={() => load(1)}
+									onClick={() => switchPage("circuits")}
 								>
 									<Icon icon={["fas", "pencil-alt"]} /> Available circuits
 								</a>

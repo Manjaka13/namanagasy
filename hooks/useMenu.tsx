@@ -1,6 +1,5 @@
 import { useState, useContext, createContext, FC, ReactNode } from "react";
 import { IMenuContext } from "helpers/interface";
-import { navLinks } from "helpers/const";
 
 /*
 	Menu hook and context
@@ -8,7 +7,6 @@ import { navLinks } from "helpers/const";
 
 const defaultState: IMenuContext = {
 	opened: false,
-	navLinks,
 	toggle: () => null,
 	close: () => null,
 };
@@ -28,7 +26,6 @@ const MenuProvider: FC<ReactNode> = ({ children }) => {
 		<MenuContext.Provider
 			value={{
 				opened,
-				navLinks,
 				toggle,
 				close,
 			}}

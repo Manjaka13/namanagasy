@@ -1,5 +1,6 @@
 import { useState, useContext, createContext, FC } from "react";
 import { IPageContext, IPageProviderProps } from "helpers/interface";
+import { navLinks } from "helpers/const";
 
 /*
 	Page hook and context
@@ -8,8 +9,7 @@ import { IPageContext, IPageProviderProps } from "helpers/interface";
 const defaultState: IPageContext = {
 	loading: true,
 	tab: 0,
-	load: () => null,
-	unload: () => null,
+	switchPage: () => null,
 };
 
 // Setup context
@@ -24,21 +24,28 @@ const PageProvider: FC<IPageProviderProps> = ({
 	const [loading, setLoading] = useState<boolean>(defaultLoading || false);
 	const [tab, setTab] = useState<number>(defaultTab || 0);
 
-	const load = (tab?: number): void => {
-		if (tab && typeof tab === "number") {
+	// Switch to page
+	const switchPage = (pageName: string | null): void => {
+		let page = -1;
+		if (typeof pageName === "string") {
+			for (let i = 0; i < navLinks.length; i++) {
+				if (navLinks[i].isAnchor) return;
+				else if (navLinks[i].name === pageName) {
+					page = i;
+					break;
+				}
+			}
+			setTab(page);
 			setLoading(true);
-			setTab(tab);
-		}
+		} else setTab(page);
 	};
-	const unload = (): void => setLoading(false);
 
 	return (
 		<PageContext.Provider
 			value={{
 				loading,
 				tab,
-				load,
-				unload,
+				switchPage,
 			}}
 		>
 			{children}

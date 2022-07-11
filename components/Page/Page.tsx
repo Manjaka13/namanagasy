@@ -3,6 +3,7 @@ import Heading from "components/Page/Heading";
 import Navigation from "components/Navigation/Navigation";
 import { IHeadingProps } from "helpers/interface";
 import Footer from "components/Page/Footer";
+import PageWaiting from "components/Page/PageWaiting";
 import Contacts from "components/Contacts";
 
 /*
@@ -22,6 +23,7 @@ const Page: FC<IHeadingProps> = ({
 		{/* Body */}
 		<main>
 			<Navigation />
+			<PageWaiting />
 			{children}
 			<Contacts />
 		</main>

@@ -5,21 +5,14 @@ import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import { INavlink } from "helpers/interface";
 import { FC } from "react";
 import { usePage } from "hooks/usePage";
+import { navLinks } from "helpers/const";
 
 /*
     List navigation links
 */
 
 const Navlinks: FC = (): JSX.Element => {
-	const { navLinks } = useMenu();
-	const { load, tab } = usePage();
-
-	const switchPage = (page: number): void => {
-		if (page != tab) {
-			if (page != navLinks.length - 1) load(page);
-			else load();
-		}
-	};
+	const { switchPage, tab } = usePage();
 
 	const mappedNavlinks: Array<JSX.Element> = navLinks.map(
 		(item: INavlink, key: number) => (
@@ -31,7 +24,7 @@ const Navlinks: FC = (): JSX.Element => {
 					<a
 						className="navlinks__link"
 						title={item.title}
-						onClick={() => switchPage(key)}
+						onClick={() => switchPage(item.name)}
 					>
 						<Icon className="navlinks__icon mg-r-5" icon={item.icon} /> {item.content}
 					</a>

@@ -17,7 +17,7 @@ const CircuitCard = ({
 	duration,
 	description,
 }: ICircuit) => {
-	const { load } = usePage();
+	const { switchPage } = usePage();
 
 	return (
 		<article className="circuit-card o-h bg-white b-b f-c-st-st tr-200">
@@ -53,7 +53,7 @@ const CircuitCard = ({
 					<Link href={`/circuit/${id}`}>
 						<a
 							className="circuit-card__details pd-10 pd-l-20 pd-r-20 bg-green white br-5 p tr-200"
-							onClick={() => load(-1)}
+							onClick={() => switchPage(null)}
 							title="View circuit details"
 						>
 							<Icon icon={["fas", "info-circle"]} /> Details

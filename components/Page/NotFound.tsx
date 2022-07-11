@@ -8,7 +8,7 @@ import { usePage } from "hooks/usePage";
 */
 
 const NotFound: FC = (): JSX.Element => {
-	const { load } = usePage();
+	const { switchPage } = usePage();
 
 	return (
 		<div className="not-found w-100 o-h f-c-ce-ce">
@@ -27,7 +27,7 @@ const NotFound: FC = (): JSX.Element => {
 						<a
 							className="back pd-10 pd-r-20 pd-r-20 bg-green white br-5 tr-200"
 							title="Back to home"
-							onClick={() => load(0)}
+							onClick={() => switchPage("home")}
 						>
 							<Icon icon={["fas", "home"]} /> Back to safe place
 						</a>

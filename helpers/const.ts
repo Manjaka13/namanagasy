@@ -12,28 +12,33 @@ const isProduction: boolean = process.env.NODE_ENV != "development";
 
 const navLinks: Array<INavlink> = [
 	{
+		name: "home",
 		content: "Home",
 		icon: ["fas", "home"],
 		title: "Go to homepage.",
 		link: "/",
 	},
 	{
+		name: "circuits",
 		content: "Circuits",
 		icon: ["fas", "plane"],
 		title: "Available circuits for this season.",
 		link: "/circuit",
 	},
 	{
+		name: "madagascar",
 		content: "Madagascar",
 		icon: ["fas", "globe"],
 		title: "Everything you need to know about Madagascar.",
 		link: "/madagascar",
 	},
 	{
+		name: "contacts",
 		content: "Contacts",
 		icon: ["fas", "envelope"],
 		title: "Contact us !",
 		link: "#contacts",
+		isAnchor: true,
 	},
 ];
 

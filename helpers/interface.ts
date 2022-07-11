@@ -12,15 +12,16 @@ export interface IHeadingProps {
 }
 
 export interface INavlink {
+	name: string;
 	icon: IconProp;
 	content: string;
 	link: string;
 	title?: string;
+	isAnchor?: boolean;
 }
 
 export interface IMenuContext {
 	opened: boolean;
-	navLinks: Array<INavlink>;
 	toggle: () => void;
 	close: () => void;
 }
@@ -38,8 +39,7 @@ export interface ISpinnerProps {
 export interface IPageContext {
 	loading: boolean;
 	tab: number;
-	load: (tab?: number) => void;
-	unload: () => void;
+	switchPage: (pageName: string | null) => void;
 }
 
 export interface IPageProviderProps {
