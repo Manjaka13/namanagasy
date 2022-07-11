@@ -1,0 +1,25 @@
+.map-route {
+	width: calc(50% - 10px);
+	min-height: 100%;
+
+	&__container {
+		width: calc(100% - 40px);
+		height: 300px;
+		border: 2px rgb(100, 100, 100) solid;
+		margin: auto;
+		overflow: hidden;
+		background: #dddddd;
+		box-sizing: border-box;
+	}
+
+	&__image {
+		width: calc(100% - 40px);
+		margin: auto;
+		height: 300px;
+		background: #dddddd;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+		.image {
+			object-fit: cover;
+		}
+	}
+}

@@ -18,13 +18,14 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 		props: {
 			circuit,
 		},
+		notFound: !circuit,
 	};
 };
 
 const CircuitDetailsPage = ({
 	circuit,
 }: {
-	circuit: ICircuit | null;
+	circuit: ICircuit;
 }): JSX.Element => {
 	return (
 		<PageProvider defaultLoading={false} defaultTab={1}>
@@ -36,7 +37,7 @@ const CircuitDetailsPage = ({
 					"Affordable touristic circuits to Madagascar with experienced driver and guide."
 				}
 			>
-				<CircuitDetails />
+				<CircuitDetails circuit={circuit} />
 			</Page>
 		</PageProvider>
 	);
