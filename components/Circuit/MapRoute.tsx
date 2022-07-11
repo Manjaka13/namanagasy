@@ -27,6 +27,7 @@ const MapRoute = ({ circuit }: { circuit: ICircuit }): JSX.Element => {
 					layout="fill"
 				/>
 			</figure>
+			<p className="i tx-r pd-20">© Jonathan Rakotondrazaka</p>
 		</div>
 	);
 };

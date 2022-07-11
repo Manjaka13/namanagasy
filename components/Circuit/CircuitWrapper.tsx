@@ -1,17 +1,19 @@
-import { FC, Fragment } from "react";
+import { Fragment } from "react";
 import CircuitList from "components/Circuit/CircuitList";
-import useCircuit from "hooks/useCircuit";
+import { ICircuit } from "helpers/interface";
 
 /*
 	Wrapper around circuits page
 */
 
-const CircuitWrapper: FC = (): JSX.Element => {
-	const circuitList = useCircuit();
-
+const CircuitWrapper = ({
+	circuits,
+}: {
+	circuits: Array<ICircuit>;
+}): JSX.Element => {
 	return (
 		<Fragment>
-			<CircuitList circuitList={circuitList} />
+			<CircuitList circuitList={circuits} />
 		</Fragment>
 	);
 };

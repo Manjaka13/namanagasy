@@ -1,15 +1,31 @@
 import { Fragment } from "react";
-import type { NextPage } from "next";
+import type { GetServerSideProps } from "next";
 import Page from "components/Page/Page";
 import CircuitWrapper from "components/Circuit/CircuitWrapper";
 import { PageProvider } from "hooks/usePage";
+import { ICircuit } from "helpers/interface";
+import { getCircuitList } from "services/";
 
 /*
 	Circuits page
 */
 
-const CircuitPage: NextPage = (): JSX.Element => (
-	<PageProvider defaultLoading={true} defaultTab={1}>
+// Fetch data from server
+export const getServerSideProps: GetServerSideProps = async () => {
+	let circuits: Array<ICircuit> = await getCircuitList();
+	return {
+		props: {
+			circuits,
+		},
+	};
+};
+
+const CircuitPage = ({
+	circuits,
+}: {
+	circuits: Array<ICircuit>;
+}): JSX.Element => (
+	<PageProvider defaultTab={1}>
 		<Page
 			title="Trips to Madagascar for all budgets"
 			image="/assets/covers/pirogue-morondava.jpg"
@@ -17,7 +33,7 @@ const CircuitPage: NextPage = (): JSX.Element => (
 				guide."
 		>
 			<Fragment>
-				<CircuitWrapper />
+				<CircuitWrapper circuits={circuits} />
 			</Fragment>
 		</Page>
 	</PageProvider>
