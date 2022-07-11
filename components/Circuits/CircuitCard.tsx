@@ -50,10 +50,11 @@ const CircuitCard = ({
 				<div className="circuit-card__separator mg-l-10"></div>
 				<p className="circuit-card__text fs-90 pd-10 tx-j">{description}</p>
 				<p className="tx-c mg-t-20">
-					<Link href={`/circuits/${id}`} passHref>
+					<Link href={`/circuits/${id}`}>
 						<a
 							className="circuit-card__details pd-10 pd-l-20 pd-r-20 bg-green white br-5 p tr-200"
 							onClick={() => load()}
+							title="View circuit details"
 						>
 							<Icon icon={["fas", "info-circle"]} /> Details
 						</a>
