@@ -15,6 +15,7 @@ const Page: FC<IHeadingProps> = ({
 	description,
 	image,
 	children,
+	blank,
 }): JSX.Element => (
 	<Fragment>
 		{/* Head */}
@@ -22,14 +23,18 @@ const Page: FC<IHeadingProps> = ({
 
 		{/* Body */}
 		<main>
-			<Navigation />
-			<PageWaiting />
+			{!blank && (
+				<Fragment>
+					<Navigation />
+					<PageWaiting />
+				</Fragment>
+			)}
 			{children}
-			<Contacts />
+			{!blank && <Contacts />}
 		</main>
 
 		{/* Footer */}
-		<Footer />
+		{!blank && <Footer />}
 	</Fragment>
 );
 

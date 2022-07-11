@@ -4,7 +4,6 @@ import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import Social from "components/Social";
 import { homeTextList } from "helpers/const";
 import { usePage } from "hooks/usePage";
-import { navLinks } from "helpers/const";
 
 /*
 	Home cover

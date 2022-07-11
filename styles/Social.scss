@@ -38,3 +38,21 @@
 		}
 	}
 }
+
+.login .social {
+	@include flex-row(center, initial);
+	padding-top: 10px;
+
+	&__item {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	&__link {
+		font-size: 2em;
+		color: rgb(100, 100, 100);
+		&:hover {
+			color: $color-theme;
+		}
+	}
+}
