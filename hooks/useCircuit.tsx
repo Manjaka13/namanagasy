@@ -9,20 +9,23 @@ import { ICircuit } from "helpers/interface";
 
 const useCircuit = (): Array<ICircuit> => {
 	const [circuitList, setCircuitList] = useState<Array<ICircuit>>([]);
-	const { unload } = usePage();
+	const { unload, loading } = usePage();
 
 	useEffect(() => {
-		getCircuitList()
-			.then((list: Array<ICircuit>) => {
-				setCircuitList(list);
-				setTimeout(() => {
-					unload();
-				}, 100);
-			})
-			.catch((e) => {
-				console.error(e);
-			});
-	}, [unload]);
+		let timeoutId: NodeJS.Timeout;
+		if (circuitList.length === 0)
+			getCircuitList()
+				.then((list: Array<ICircuit>) => {
+					timeoutId = setTimeout(() => {
+						setCircuitList(list);
+						unload();
+					}, 100);
+				})
+				.catch((e) => {
+					console.error(e);
+				});
+		return () => clearTimeout(timeoutId);
+	}, [unload, circuitList]);
 
 	return circuitList;
 };

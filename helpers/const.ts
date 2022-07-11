@@ -27,7 +27,7 @@ const navLinks: Array<INavlink> = [
 		content: "Madagascar",
 		icon: ["fas", "globe"],
 		title: "Everything you need to know about Madagascar.",
-		link: "#0",
+		link: "/madagascar",
 	},
 	{
 		content: "Contacts",

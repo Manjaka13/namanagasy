@@ -12,13 +12,27 @@ import { usePage } from "hooks/usePage";
 
 const Navlinks: FC = (): JSX.Element => {
 	const { navLinks } = useMenu();
-	const { load } = usePage();
+	const { load, tab } = usePage();
+
+	const switchPage = (page: number): void => {
+		if (page != tab) {
+			if (page != navLinks.length - 1) load(page);
+			else load();
+		}
+	};
 
 	const mappedNavlinks: Array<JSX.Element> = navLinks.map(
 		(item: INavlink, key: number) => (
-			<li className={`navlinks__item`} key={uuidv4()}>
+			<li
+				className={`navlinks__item ${tab === key ? "navlinks__item--active" : ""}`}
+				key={uuidv4()}
+			>
 				<Link href={item.link}>
-					<a className="navlinks__link" title={item.title} onClick={() => load()}>
+					<a
+						className="navlinks__link"
+						title={item.title}
+						onClick={() => switchPage(key)}
+					>
 						<Icon className="navlinks__icon mg-r-5" icon={item.icon} /> {item.content}
 					</a>
 				</Link>

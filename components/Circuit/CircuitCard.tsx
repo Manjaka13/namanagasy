@@ -53,7 +53,7 @@ const CircuitCard = ({
 					<Link href={`/circuit/${id}`}>
 						<a
 							className="circuit-card__details pd-10 pd-l-20 pd-r-20 bg-green white br-5 p tr-200"
-							onClick={() => load()}
+							onClick={() => load(-1)}
 							title="View circuit details"
 						>
 							<Icon icon={["fas", "info-circle"]} /> Details

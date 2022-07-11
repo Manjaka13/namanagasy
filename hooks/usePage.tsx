@@ -6,7 +6,8 @@ import { IPageContext, IPageProviderProps } from "helpers/interface";
 */
 
 const defaultState: IPageContext = {
-	loading: false,
+	loading: true,
+	tab: 0,
 	load: () => null,
 	unload: () => null,
 };
@@ -15,18 +16,27 @@ const defaultState: IPageContext = {
 const PageContext = createContext<IPageContext>(defaultState);
 
 // Setup provider wrapper
-const PageProvider: FC<IPageProviderProps> = ({ children, defaultLoading }) => {
-	const [loading, setLoading] = useState<boolean>(
-		defaultLoading ? defaultLoading : false
-	);
+const PageProvider: FC<IPageProviderProps> = ({
+	children,
+	defaultLoading,
+	defaultTab,
+}): JSX.Element => {
+	const [loading, setLoading] = useState<boolean>(defaultLoading || false);
+	const [tab, setTab] = useState<number>(defaultTab || 0);
 
-	const load = () => setLoading(true);
-	const unload = () => setLoading(false);
+	const load = (tab?: number): void => {
+		if (tab && typeof tab === "number") {
+			setLoading(true);
+			setTab(tab);
+		}
+	};
+	const unload = (): void => setLoading(false);
 
 	return (
 		<PageContext.Provider
 			value={{
 				loading,
+				tab,
 				load,
 				unload,
 			}}

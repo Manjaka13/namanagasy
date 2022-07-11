@@ -27,7 +27,7 @@ const NotFound: FC = (): JSX.Element => {
 						<a
 							className="back pd-10 pd-r-20 pd-r-20 bg-green white br-5 tr-200"
 							title="Back to home"
-							onClick={() => load()}
+							onClick={() => load(0)}
 						>
 							<Icon icon={["fas", "home"]} /> Back to safe place
 						</a>

@@ -37,13 +37,15 @@ export interface ISpinnerProps {
 
 export interface IPageContext {
 	loading: boolean;
-	load: () => void;
+	tab: number;
+	load: (tab?: number) => void;
 	unload: () => void;
 }
 
 export interface IPageProviderProps {
 	children?: JSX.Element;
 	defaultLoading?: boolean;
+	defaultTab?: number;
 }
 
 export interface IContact {

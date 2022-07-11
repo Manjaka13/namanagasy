@@ -52,7 +52,7 @@ const CoverHome: FC = (): JSX.Element => {
 								<a
 									className="cover-home__check pd-10 pd-l-20 pd-r-20 br-5 p t tr-200"
 									title="Check list of available circuits for this season."
-									onClick={() => load()}
+									onClick={() => load(1)}
 								>
 									<Icon icon={["fas", "pencil-alt"]} /> Available circuits
 								</a>
