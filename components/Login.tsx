@@ -79,7 +79,7 @@ const Login = () => {
 				<div className="overlay w-100 h-100 o-h f-c-st-st">
 					<div className="text-box f-r-st-ce">
 						<h2 className="text t fs-450 pd-40">
-							Selling dreams and unforgetable moments
+							Selling dreams, hapiness and unforgetable moments
 						</h2>
 					</div>
 					<div className="w-100 h-200px f-r-be-en">
