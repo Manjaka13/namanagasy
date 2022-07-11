@@ -2,6 +2,11 @@
     Import all styles
 */
 
+@font-face {
+	font-family: "Open Sans";
+	src: url("/fonts/OpenSans-Regular.ttf");
+}
+
 @import "base/fastui.css";
 @import "base/vars.scss";
 @import "base/mixins.scss";
