@@ -24,7 +24,9 @@ const Navlinks: FC = (): JSX.Element => {
 					<a
 						className="navlinks__link"
 						title={item.title}
-						onClick={() => switchPage(item.name)}
+						onClick={() => {
+							if (key != tab) switchPage(item.name);
+						}}
 					>
 						<Icon className="navlinks__icon mg-r-5" icon={item.icon} /> {item.content}
 					</a>
