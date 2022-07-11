@@ -1,3 +1,4 @@
+import { FormEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -8,21 +9,29 @@ import Social from "components/Social";
 */
 
 const Login = () => {
+	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+	};
+
 	return (
 		<div className="login f-r-st-st">
 			<div className="login__window w-35 h-100">
-				<figure className="pd-20 pd-b-10 tx-c">
-					<Image
-						className="image"
-						src="/assets/namanagasy-logo.png"
-						alt="Logo Namanagasy"
-						width={100}
-						height={100}
-					/>
-				</figure>
+				<Link href="/">
+					<a title="Back to website home">
+						<figure className="pd-20 pd-b-10 tx-c">
+							<Image
+								className="image"
+								src="/assets/namanagasy-logo.png"
+								alt="Logo Namanagasy"
+								width={100}
+								height={100}
+							/>
+						</figure>
+					</a>
+				</Link>
 				<h1 className="login__title t tx-c fs-230 pd-b-20">Namanagasy</h1>
 				<div className="w-30 h-5px br-5 mg-a bg-t b-b"></div>
-				<form className="form pd-20 tx-c pd-b-0">
+				<form className="form pd-20 tx-c pd-b-0" onSubmit={handleSubmit}>
 					<input
 						className="input tr-200 mg-b-20 br-10 pd-10 pd-l-20 pd-r-20"
 						name="email"
