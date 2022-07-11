@@ -1,3 +1,4 @@
+import { AxiosRequestHeaders } from "axios";
 import { INavlink, ISocial, IContact } from "helpers/interface";
 
 /*
@@ -6,6 +7,8 @@ import { INavlink, ISocial, IContact } from "helpers/interface";
 
 const baseUrl: string =
 	process.env.NEXT_PUBLIC_BASEURL || "http://localhost:3000/api/";
+const isDevelopment: boolean = process.env.NODE_ENV === "development";
+const isProduction: boolean = process.env.NODE_ENV != "development";
 
 const navLinks: Array<INavlink> = [
 	{
@@ -82,4 +85,19 @@ const homeTextList: Array<string> = [
 	"Famous travel agency to Madagascar",
 ];
 
-export { baseUrl, navLinks, socialLinks, contactList, homeTextList };
+// Default request headers
+const requestHeaders: AxiosRequestHeaders = {
+	Accept: "application/json",
+	"Content-Type": "application/json",
+};
+
+export {
+	baseUrl,
+	navLinks,
+	socialLinks,
+	contactList,
+	homeTextList,
+	isDevelopment,
+	isProduction,
+	requestHeaders,
+};

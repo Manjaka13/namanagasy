@@ -12,6 +12,8 @@ import {
 	faPhone,
 	faMapMarkerAlt,
 	faPencilAlt,
+	faInfoCircle,
+	faShare,
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -34,5 +36,7 @@ library.add(
 	faHandshake,
 	faPhone,
 	faMapMarkerAlt,
-	faPencilAlt
+	faPencilAlt,
+	faInfoCircle,
+	faShare
 );

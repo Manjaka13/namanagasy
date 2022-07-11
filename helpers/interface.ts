@@ -9,7 +9,6 @@ export interface IHeadingProps {
 	image?: string;
 	description?: string;
 	children?: JSX.Element;
-	defaultLoading?: boolean;
 }
 
 export interface INavlink {
@@ -50,4 +49,21 @@ export interface IPageProviderProps {
 export interface IContact {
 	icon: IconProp;
 	content: string;
+}
+
+export interface IWs {
+	circuitList: string;
+}
+
+export interface ICircuit {
+	id: string;
+	title: string;
+	image: string;
+	price: number;
+	duration: number;
+	description: string;
+}
+
+export interface ICircuitListProps {
+	circuitList: Array<ICircuit>;
 }

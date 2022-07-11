@@ -44,6 +44,10 @@
 	padding-top: 20px;
 	padding-left: 20px;
 
+	@include screen-x(600px) {
+		padding-left: 0;
+	}
+
 	&__item {
 		@include screen-x(600px) {
 			text-align: center;
