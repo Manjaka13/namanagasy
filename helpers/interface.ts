@@ -69,3 +69,8 @@ export interface ICircuit {
 export interface ICircuitListProps {
 	circuitList: Array<ICircuit>;
 }
+
+export interface IItinerary {
+	position: Array<number | number>;
+	zoom: number;
+}

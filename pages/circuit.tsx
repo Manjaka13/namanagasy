@@ -8,7 +8,7 @@ import { PageProvider } from "hooks/usePage";
 	Circuits page
 */
 
-const Circuits: NextPage = (): JSX.Element => (
+const CircuitPage: NextPage = (): JSX.Element => (
 	<PageProvider defaultLoading={true} defaultTab={1}>
 		<Page
 			title="Trips to Madagascar for all budgets"
@@ -23,4 +23,4 @@ const Circuits: NextPage = (): JSX.Element => (
 	</PageProvider>
 );
 
-export default Circuits;
+export default CircuitPage;

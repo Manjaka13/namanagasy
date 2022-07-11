@@ -1,3 +1,4 @@
+import "leaflet/dist/leaflet.css";
 import "styles/index.scss";
 import "helpers/icons";
 import type { AppProps } from "next/app";

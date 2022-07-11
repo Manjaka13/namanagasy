@@ -1,37 +1,45 @@
-import React, { Fragment } from "react";
-import { useRouter } from "next/router";
-import Heading from "components/Page/Heading";
+import type { GetServerSideProps } from "next";
 import Page from "components/Page/Page";
+import CircuitDetails from "components/Circuit/CircuitDetails";
 import { PageProvider } from "hooks/usePage";
-// import Planning from "components/Planning";
-// import PlaceDetails from "components/PlaceDetails";
+import { ICircuit } from "helpers/interface";
+import { getCircuit } from "services/";
 
 /*
 	Circuit details
 */
 
-const CircuitDetails = () => {
-	const router = useRouter();
-	const { id } = router.query;
+// Fetch data from server
+export const getServerSideProps: GetServerSideProps = async (context) => {
+	let circuit: ICircuit | null = null;
+	if (typeof context?.params?.id === "string")
+		circuit = await getCircuit(context.params.id);
+	return {
+		props: {
+			circuit,
+		},
+	};
+};
 
-	return !id ? <Fragment></Fragment> : (
+const CircuitDetailsPage = ({
+	circuit,
+}: {
+	circuit: ICircuit | null;
+}): JSX.Element => {
+	return (
 		<PageProvider defaultLoading={false} defaultTab={1}>
-			<Heading
-				title="Baobabs Alley"
-				image="/images/covers/baobabs-alley-morondava.jpg"
+			<Page
+				title={circuit?.title || "Trips to Madagascar for all budgets"}
+				image={circuit?.image || "/assets/covers/pirogue-morondava.jpg"}
+				description={
+					circuit?.description ||
+					"Affordable touristic circuits to Madagascar with experienced driver and guide."
+				}
 			>
-				Trip to Baobabs Alley for all budgets
-			</Heading>
-			<Page>
-				<div id="circuit" className="circuit-details n-s">
-					<div className="circuit-details__main container w-100">
-						{/* <PlaceDetails /> */}
-						{/* <Planning /> */}
-					</div>
-				</div>
+				<CircuitDetails />
 			</Page>
 		</PageProvider>
 	);
-}
+};
 
-export default CircuitDetails;
+export default CircuitDetailsPage;

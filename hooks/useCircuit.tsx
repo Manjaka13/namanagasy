@@ -9,7 +9,7 @@ import { ICircuit } from "helpers/interface";
 
 const useCircuit = (): Array<ICircuit> => {
 	const [circuitList, setCircuitList] = useState<Array<ICircuit>>([]);
-	const { unload, loading } = usePage();
+	const { unload } = usePage();
 
 	useEffect(() => {
 		let timeoutId: NodeJS.Timeout;
