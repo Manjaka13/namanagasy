@@ -17,11 +17,11 @@
 @import "Navigation/Navlinks.scss";
 @import "Navigation/Navbar.scss";
 @import "Navigation/Menu.scss";
-@import "Copyright.scss";
 @import "Spinner.scss";
-@import "PageWaiting.scss";
 @import "Contacts.scss";
-@import "CoverHome.scss";
+@import "Home/CoverHome.scss";
 @import "Circuit/CircuitCard.scss";
 @import "Circuit/CircuitList.scss";
-@import "NotFound.scss";
+@import "Page/NotFound.scss";
+@import "Page/Footer.scss";
+@import "Page/PageWaiting.scss";
