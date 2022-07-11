@@ -14,6 +14,7 @@ import {
 	faPencilAlt,
 	faInfoCircle,
 	faShare,
+	faExclamationCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
 /*
@@ -38,5 +39,6 @@ library.add(
 	faMapMarkerAlt,
 	faPencilAlt,
 	faInfoCircle,
-	faShare
+	faShare,
+	faExclamationCircle
 );

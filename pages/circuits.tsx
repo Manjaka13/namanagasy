@@ -13,7 +13,7 @@ const Circuits: NextPage = (): JSX.Element => {
 		<PageProvider defaultLoading={true}>
 			<Page
 				title="Trips to Madagascar for all budgets"
-				image="/images/covers/pirogue-morondava.jpg"
+				image="/assets/covers/pirogue-morondava.jpg"
 				description="Affordable touristic circuits to Madagascar with experienced driver and
 				guide."
 			>
